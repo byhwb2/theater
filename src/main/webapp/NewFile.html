@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<script type="text/javascript">
+function save(){
+	$.ajax({
+		type: "get",
+		url: "http://localhost:8080/stus",
+		/* data:{"sid":"5"}, */
+		async:false,
+		success:function(){
+			alert("saved");
+		}
+	})
+}
+</script>
+<body>
+
+<button id="save" onclick="save()">save</button>
+</body>
+</html>
